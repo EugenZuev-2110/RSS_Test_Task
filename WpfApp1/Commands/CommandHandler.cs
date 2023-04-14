@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
-namespace WpfApp1
+namespace WpfApp1.Commands
 {
     public class CommandHandler : ICommand
     {

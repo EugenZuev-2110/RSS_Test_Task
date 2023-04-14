@@ -89,9 +89,17 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="CommandHandler.cs" />
+    <Compile Include="Commands\CommandHandler.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Contexts\ProductContext.cs" />
+    <Page Include="Views\MainWindowTheme.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AddProductWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -101,6 +109,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="ViewModels\MainVM.cs" />
+    <Compile Include="Views\AddProductWindow.xaml.cs">
+      <DependentUpon>AddProductWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -135,6 +146,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DataAccessLayer\" />
+    <Folder Include="Themes\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
